@@ -22,6 +22,11 @@ module.exports = {
   },
   module: {
     rules: [
+         {
+      test : /\.jpg$/,
+      exclude: /(node_modules)/,
+      loader : 'file-loader'
+    },
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
@@ -34,15 +39,20 @@ module.exports = {
               loader: "css-loader" // translates CSS into CommonJS
           }, {
               loader: "sass-loader" // compiles Sass to CSS
-          }]
-        }, //css only files
+          }, 
+          ]
+          
+        },
+       
+        
+         //css only files
         { 
           test: /\.(png|svg|jpg|gif)$/, use: {
             loader: 'file-loader',
             options: { name: '[name].[ext]' } 
           }
         }, //for images
-        { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } //for fonts
+        { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.jpg($|\?)/, use: ['file-loader'] } //for fonts
     ]
   },
   resolve: {

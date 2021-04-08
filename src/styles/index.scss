@@ -1,13 +1,12 @@
 @import "~bootstrap/scss/bootstrap.scss";
-
-/* 
-
-    You can write your own styles here...
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+body {
+    letter-spacing: 1px;
+    background-color: #31037D;
+    color: white;
+    font-family: 'Londrina Solid', cursive;
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+}
+ul, li, h1, h2, h3, h4, h5, h6, strong {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
